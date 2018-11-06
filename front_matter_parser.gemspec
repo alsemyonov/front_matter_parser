@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'front_matter_parser/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "front_matter_parser"
+  spec.name          = "front_matter"
   spec.version       = FrontMatterParser::VERSION
-  spec.authors       = ["marc"]
-  spec.email         = ["marc@lamarciana.com"]
+  spec.authors       = ["marc", "Alex Semyonov"]
+  spec.email         = ["marc@lamarciana.com", "alex@cerebelo.space"]
   spec.description   = %q{Parse a front matter from syntactically correct strings or files}
   spec.summary       = %q{Library to parse a front matter from strings or files. It allows writing syntactically correct source files, marking front matters as comments in the source file language.}
   spec.homepage      = "https://github.com/waiting-for-dev/front_matter_parser"
@@ -17,6 +17,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.metadata["allowed_push_host"] = "https://gems.cerebelo.space/"
+
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 12.0"
